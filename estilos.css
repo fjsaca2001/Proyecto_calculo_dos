@@ -1,6 +1,6 @@
 /* cambios nuevos */
 body{
- background-image: url(fondo.jpg);
+ background-image: url(img/fondo.jpg);
  background-size: 1550px 800px;
  cursor: url(../cursores/cursor1.cur), url(cursores/cursor1.cur), pointer;
 }
