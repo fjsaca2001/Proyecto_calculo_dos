@@ -1,8 +1,14 @@
+/* cambios nuevos */
 body{
  background-image: url(fondo.jpg);
  background-size: 1550px 800px;
+<<<<<<< HEAD
  cursor: url(../cursores/linux.cur), url(cursores/linux.cur), pointer;	
+=======
+ cursor: url(../linux.cur), url(linux.cur), pointer;
+>>>>>>> e4cd9d3bf5784c7b2282d48664c6c82bea0b23ea
 }
+/* fin de cambios nuevos*/
 h1{
    color:white;
    font-family:arial;
