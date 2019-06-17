@@ -1,7 +1,10 @@
+/* cambios nuevos */
 body{
  background-image: url(fondo.jpg);
  background-size: 1550px 800px;
+ cursor: url(../linux.cur), url(linux.cur), pointer;
 }
+/* fin de cambios nuevos*/
 h1{
    color:white;
    font-family:arial;
@@ -36,14 +39,36 @@ p{
    font-size:10px;
    font-aling:center;
 }
-
-.lista{
-   color:#FF1CAE;
-   font-family:Aharoni;
-   font-size:50px;
-   font-aling:center;
+header{
+    margin: auto;
+    white: 200px;
+    font-family: arial;
 }
+ul, ol{
+  list-style: none;
+}
+.nav li a{
+   background-color:rgba(0,0,0,0.5);
+   color: black;
+   text-decoration:none ;
+   padding: 2px 15px;
+   display:block;
+}
+.nav li a:hover{
 
+  background-color:#5F756D;
+}
+.nav li ul {
+  display:none;
+  position:absolute;
+}
+.nav li:hover > ul {
+  display: block;
+}
+.nav > li {
+  float: left;
+
+}
 .primero{
    color:#D8D8BF;
    font-family:Broadway;
@@ -279,24 +304,14 @@ TRANSITION:width 1s;
     background-color 4s;
 }
 table {
-   width: 10%;
+   width: 350px;
    vertical-align: top;
    background-image: url(pizarra.jpg);
-   background-size:299px 220px ;
+   background-size:325px 220px ;
    color: white;
    font-family: Helvetica;
    text-align: legth;
-   width: 250px;
-}
-}
-th, td {
-   width: 40%;
-   text-align:left;
-   border-spacing: 0;
-   vertical-align: top;
-   padding: 0.3em;
-   background: #fff;
-   color: #000;
+   width: 300px;
 }
 caption {
    padding: 0.3em;
