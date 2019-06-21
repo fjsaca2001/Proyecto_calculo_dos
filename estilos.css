@@ -1,8 +1,12 @@
 /* cambios nuevos */
 body{
- background-image: url(fondo.jpg);
+ background-image: url(img/fondo.jpg);
  background-size: 1550px 800px;
+<<<<<<< HEAD
  cursor: url(../linux.cur), url(linux.cur), pointer;
+=======
+ cursor: url(../cursores/cursor1.cur), url(cursores/cursor1.cur), pointer;
+>>>>>>> 1fb96f89a639e98a8a1ef6740b5ea1230f71d9a9
 }
 /* fin de cambios nuevos*/
 h1{
@@ -14,9 +18,9 @@ h1{
 h2{
    color:#00FF7F;
    font-family:castellar;
-   font-size:35px;
+   font-size:30px;
    font-aling:center;
-   text-shadow:20px 20px 20px blue;
+   text-shadow:10px 5px 10px white;
 }
 
 h3{
@@ -31,13 +35,13 @@ h4{
    font-family:arial;
    font-size:20px;
    font-aling:center;
-   text-shadow:20px 20px 20px RED;
+   text-shadow:20px 20px 10px RED;
 }
 p{
-   color:red;
+   color: white;
    font-family:Arial Black;
-   font-size:10px;
-   font-aling:center;
+   font-size:20px;
+   font-aling:left;
 }
 header{
     margin: auto;
@@ -48,14 +52,13 @@ ul, ol{
   list-style: none;
 }
 .nav li a{
-   background-color:rgba(0,0,0,0.5);
+   background-color:white;
    color: black;
    text-decoration:none ;
    padding: 2px 15px;
    display:block;
 }
 .nav li a:hover{
-
   background-color:#5F756D;
 }
 .nav li ul {
@@ -66,6 +69,27 @@ ul, ol{
   display: block;
 }
 .nav > li {
+  float: left;
+
+}
+.nave li a{
+   background-color:#294E33;
+   color: black;
+   text-decoration:none ;
+   padding: 10px 35px;
+   display:absolute;
+}
+.nave li a:hover{
+  background-color:#5F756D;
+}
+.nave li ul {
+  display:none;
+  position:absolute ;
+}
+.nave li:hover > ul {
+  display: block;
+}
+.nave > li {
   float: left;
 
 }
@@ -112,19 +136,23 @@ background-color:black;
 background-color:red;
 }
 #recuadro1{
-box-shadow:40px 32px 40px,
-20px 18px 20px;
-border-top-left-radius:50px;
-background-color:#aaa;
+box-shadow:10px 20px 30px white,
+10px 20px 30px blue;
+border-radius:30px;
+background-color:rgba(0,0,0,0.5);
 width:200px;
-padding:50px;
+padding:40px;
 margin-top:10px;
-transition:width 4s;
+transition:width 2s;
 }
 #recuadro1:hover {
-width:400px;
-border-radius:50px;
+width:490px;
+border-radius:20px;
 }
+
+
+
+
 #recuadro2{
 box-shadow:40px 32px 40px,
 20px 18px 20px;
@@ -306,8 +334,7 @@ TRANSITION:width 1s;
 table {
    width: 350px;
    vertical-align: top;
-   background-image: url(pizarra.jpg);
-   background-size:325px 220px ;
+   background-size:365px 220px ;
    color: white;
    font-family: Helvetica;
    text-align: legth;
@@ -338,5 +365,4 @@ a:hover {
 a:active {
   text-decoration: underline;
   color: #FF0000;
-}
 }
