@@ -3,24 +3,25 @@
     <meta charset="utf-8">
     <title>Calculadora</title>
     <link rel="icon" type="image/png" href="img/calculadora.jpg">
+    <link rel="stylesheet" href="estilos.css" type="text/css">
   </head>
   <body>
     <h1>Calculadora de funciones f(x) = x^3 + 2x^2 - 5x + 5</h1>
     <form method="post" action= "calculadora.php">
-      Ingrese el limite inferior
+      <h4>Ingrese el limite inferior
       <input type="text" name="n_inferior">
       Ingrese el limite superior
       <input type="text" name="n_superior">
-      <input type="submit" name="calcularValores" value="Calcular Valores">
+      <input type="submit" name="calcularValores" value="Calcular Valores"></h4>
       <h1>Calculadora de la derivada de una Funcion</h1>
-      <h2>Ingrese los valores segun corresponde</h2>
-      <input type="text" size="1" name="b5">x^<input type="text" size="1" name="e5"> +
-      <input type="text" size="1" name="b4">x^<input type="text" size="1" name="e4"> +
-      <input type="text" size="1" name="b3">x^<input type="text" size="1" name="e3"> +
-      <input type="text" size="1" name="b2">x^<input type="text" size="1" name="e2"> +
-      <input type="text" size="1" name="b1">x^<input type="text" size="1" name="e1"> +
-      <input type="text" size="1" name="b0">x<br><br>
-      <input type="submit" name="calcularDevivada" value=" Calcular La Derivada ">
+      <h3>Ingrese los valores segun corresponde<br>
+      <input type="text" size="1" name="b5"> x^ <input type="text" size="1" name="e5"> +
+      <input type="text" size="1" name="b4"> x^ <input type="text" size="1" name="e4"> +
+      <input type="text" size="1" name="b3"> x^ <input type="text" size="1" name="e3"> +
+      <input type="text" size="1" name="b2"> x^ <input type="text" size="1" name="e2"> +
+      <input type="text" size="1" name="b1"> x^ <input type="text" size="1" name="e1"> +
+      <input type="text" size="1" name="b0"> x <br><br>
+      <input type="submit" name="calcularDevivada" value=" Calcular La Derivada "></h3>
   </form>
   </body>
 </html>
@@ -35,19 +36,20 @@ include("clase.php");
     if ($n_superior == 0) {
       $n_superior = 5;
     }
-    echo "<table border = 3>";
-    echo "<tr><td><center>X</center></td><td><center>Y</center></td>";
+    echo "<table border = 5>";
+    echo "<tr><td><center><p>X</p></center></td><td><center><p>Y</p></center></td>";
     for ($i = $n_inferior; $i <= $n_superior ; $i++){
-      echo "<tr><td>x = $i</td>";
+      echo "<tr><td><h4>x = $i</td>";
       for ($j = 0   ; $j < 1; $j++){
            $y = matematica::valores($i);
-           echo "<td>($i)^3 + 2($i)^2 - 5($i) + 5 = $y</td>";
+           echo "<td><h4>($i)^3 + 2($i)^2 - 5($i) + 5 = $y</td>";
       }
           echo "<tr>";
     }
     echo "</tr>";
     echo "</table>";
   }
+  echo "<font face='Arial' size='5' color= white aling= center>";
   if (isset($_REQUEST['calcularDevivada'])){
     $b5 = $_REQUEST['b5'];
     $e5 = $_REQUEST['e5'];
@@ -62,30 +64,10 @@ include("clase.php");
     $b0 = $_REQUEST['b0'];
     $cad = "x^";
     echo "La Funcion Principal es: $b5$cad$e5 + $b4$cad$e4 + $b3$cad$e3 + $b2$cad$e2 + $b1$cad$e1 + $b0<br>";
-    if($e5 < 1){
-      $e5 *= -1;
-    }
-    if($e4 < 1){
-      $e4 *= -1;
-    }
-    if($e3 < 1){
-      $e3 *= -1;
-    }
-    if($e2 < 1){
-      $e2 *= -1;
-    }
-    if($e1 < 1){
-      $e1 *= -1;
-    }
     $cad = "x^";
-    echo "Primer paso<br>";
-    echo "Multiplicacion del exponente * base y exponente - 1<br>";
-    echo "($e5 * $b5$cad$e5 - 1)<br>";
-    echo "($e4 * $b4$cad$e4 - 1)<br>";
-    echo "($e3 * $b3$cad$e3 - 1)<br>";
-    echo "($e2 * $b2$cad$e2 - 1)<br>";
-    echo "($e1 * $b1$cad$e1 - 1)<br>";
-    echo "(0 * $b0$cad 0- 1)<br>";
+    echo "Primer paso: <br><br>";
+    echo "Multiplicacion del exponente * base y exponente - 1<br><br>";
+    echo "($e5 * $b5$cad$e5 - 1) + ($e4 * $b4$cad$e4 - 1) + ($e3 * $b3$cad$e3 - 1) + ($e2 * $b2$cad$e2 - 1) + ($e1 * $b1$cad$e1 - 1) + (0 * $b0$cad 0- 1)<br><br>";
     $b5 *= $e5;
     $e5 -= 1;
     $b4 *= $e4;
@@ -97,17 +79,17 @@ include("clase.php");
     $b1 *= $e1;
     $e1 -= 1;
     $b0 *= 0;
-    echo "Segundo paso<br>";
-    echo "Resultados<br>";
-    echo "($b5$cad$e5)<br>";
-    echo "($b4$cad$e4)<br>";
-    echo "($b3$cad$e3)<br>";
-    echo "($b2$cad$e2)<br>";
-    echo "($b1$cad$e1)<br>";
-    echo "($b0$cad 0)<br>";
+    echo "Segundo paso: <br>";
+    echo "Resultados<br><br>";
+    echo "($b5$cad$e5) + ($b4$cad$e4) + ($b3$cad$e3) + ($b2$cad$e2) + ($b1$cad$e1) + ($b0$cad 0)<br>";
     $resultado = "Resultado: <br> La derivada de la funcion es:";
     if($e5 == 0 || $b5 == 0){
       $cad = "";
+      $e5 = (string) $e5;
+      $e5 = "";
+    }
+    if($e5 == 1){
+      $cad = "x";
       $e5 = (string) $e5;
       $e5 = "";
     }
@@ -120,12 +102,22 @@ include("clase.php");
       $e4 = (string) $e4;
       $e4 = "";
     }
+    if($e4 ==1){
+      $cad = "x";
+      $e4 = (string) $e4;
+      $e4 = "";
+    }
     $resultado .= " + $b4$cad$e4";
     $cad = "x^";
 
 
     if($e3 == 0 || $b3 == 0){
       $cad = "";
+      $e3 = (string) $e3;
+      $e3 = "";
+    }
+    if($e3 == 1){
+      $cad = "x";
       $e3 = (string) $e3;
       $e3 = "";
     }
@@ -138,6 +130,11 @@ include("clase.php");
       $e2 = (string) $e2;
       $e2 = "";
     }
+    if($e2 == 1){
+      $cad = "x";
+      $e2 = (string) $e2;
+      $e2 = "";
+    }
     $resultado .= " + $b2$cad$e2";
     $cad = "x^";
 
@@ -147,10 +144,13 @@ include("clase.php");
       $e1 = (string) $e1;
       $e1 = "";
     }
+    if($e1 == 1){
+      $cad = "";
+      $e1 = (string) $e1;
+      $e1 = "";
+    }
     $resultado .= " + $b1$cad$e1";
     $cad = "x^";
-
-
     if ($b0 == 0) {
       $cad = "";
       $b0 = (string) $b0;
@@ -158,8 +158,6 @@ include("clase.php");
     }
     $resultado .= " $b0$cad";
     $cad = "x^";
-    echo "$resultado";
-
-    echo "hola";
+    echo "<br>  $resultado </font>";
   }
 ?>

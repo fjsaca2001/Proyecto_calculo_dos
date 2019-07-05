@@ -17,23 +17,20 @@ h2{
    font-aling:center;
    text-shadow:10px 5px 10px white;
 }
+form h3{
+  color: white;
+  font-family: calibri;
+  font-style: italic;
 
-h3{
-   color:#5959AB;
-   font-family:Arial Black;
-   font-size:35px;
-   font-aling:center;
-   text-shadow:20px -20px 20px yellow;
 }
-h4{
-   color:#8FBC8F;
-   font-family:arial;
-   font-size:20px;
-   font-aling:center;
-   text-shadow:20px 20px 10px RED;
+form h4{
+  color: white;
+  font-family: calibri;
+  font-style: italic;
+  font-size: 20px;
 }
 p{
-   color: white;
+   color: red;
    font-family:Arial Black;
    font-size:20px;
    font-aling:left;
